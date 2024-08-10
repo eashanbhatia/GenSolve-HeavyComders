@@ -1,0 +1,10 @@
+circle
+triangle
+moon
+line
+smiley_face
+hexagon
+square
+octagon
+umbrella
+star
