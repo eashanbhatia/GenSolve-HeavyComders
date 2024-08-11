@@ -93,21 +93,21 @@ The shape detection model was trained on a custom dataset of doodles, utilizing 
 ### Doodle Shape Detection
 
 -*User drawing a shape on the canvas.*
-![Drawing Pad](./public/images/doodle.png)
+ ![Drawing Pad](./public/images/doodle.png)
 
 
 -*Detected shape displayed on the app.*
-![Shape Detection](./public/images/detected.png)
+ ![Shape Detection](./public/images/detected.png)
 
 
 ### Mirror Symmetry Detection
 
 -*User uploads an image on the app.*
-![Image Upload](./public//images/symmetry_check.png)
+ ![Image Upload](./public//images/symmetry_check.png)
 
 
 -*Mirror symmetry line detected and displayed on the uploaded image.*
-![Mirror Symmetry](./public//images/symmetry_solution.png)
+ ![Mirror Symmetry](./public//images/symmetry_solution.png)
 
 
 ## Contributing
