@@ -14,17 +14,17 @@ import requests
 import os
 from dotenv import load_dotenv
 
-# Load your trained model
+
 model = keras.models.load_model('doodle-10-2.h5')
 
-# Load environment variables
+
 load_dotenv()
 
-# Initialize SIFT and BFMatcher
+
 sift = cv2.SIFT_create()
 bf = cv2.BFMatcher()
 
-# Define the DoodlePad class for the shape detection task
+
 class DoodlePad:
     def __init__(self, width=280, height=280):
         self.width = width
@@ -44,10 +44,10 @@ class DoodlePad:
     def get_bitmap(self):
         resized_image = self.image.resize((28, 28))
         bitmap = np.array(resized_image)
-        bitmap = 255 - bitmap  # Invert colors for prediction
+        bitmap = 255 - bitmap  
         return bitmap
 
-# Function to detect the shape
+
 def detect_shape(bitmap):
     class_names = ['circle', 'triangle', 'moon', 'line', 'smiley_face', 'hexagon', 'square', 'octagon', 'umbrella', 'star']
     data = bitmap.reshape(28, 28, 1).astype('float32')
@@ -56,7 +56,7 @@ def detect_shape(bitmap):
     detected_shape = [class_names[x] for x in ind][0]
     return detected_shape
 
-# Function to authenticate with Google Drive
+
 def authenticate_drive():
     service_account_info = {
         "type": "service_account",
@@ -77,7 +77,7 @@ def authenticate_drive():
     service = build('drive', 'v3', credentials=credentials)
     return service
 
-# Function to upload image to Google Drive
+
 def upload_to_drive(service, file, filename):
     file_metadata = {'name': filename, 'mimeType': 'image/jpeg'}
     media = MediaIoBaseUpload(file, mimetype='image/jpeg')
@@ -88,7 +88,7 @@ def upload_to_drive(service, file, filename):
     file_url = f"https://drive.google.com/uc?id={file_id}"
     return file_url
 
-# Class for mirror symmetry detection
+
 class Mirror_Symmetry_detection:
     def __init__(self, image_path: str):
         self.image = self._read_color_image(image_path)
@@ -170,7 +170,7 @@ class Mirror_Symmetry_detection:
         plt.show()
         
     def check_symmetry(self, points_r):
-        return len(points_r) > 0  # Adjust this threshold as needed
+        return len(points_r) > 0  
 
 def angle_with_x_axis(pi, pj):
     x, y = pi[0] - pj[0], pi[1] - pj[1]
@@ -199,7 +199,7 @@ def detecting_mirrorLine(picture_name: str, title: str, show_detail=False):
     r, theta = mirror.find_coordinate_maxhexbin(image_hexbin, sorted_vote, vertical=False)
     mirror.draw_mirrorLine(r, theta, title)
 
-# Main Streamlit App
+
 st.title("Multi-Task Streamlit App")
 
 task = st.sidebar.selectbox(
