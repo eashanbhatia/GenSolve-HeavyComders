@@ -92,25 +92,25 @@ The shape detection model was trained on a custom dataset of doodles, utilizing 
 
 ### Doodle Shape Detection
 
+-*User drawing a shape on the canvas.*
 ![Drawing Pad](./public/images/doodle.png)
-*User drawing a shape on the canvas.*
 
+
+-*Detected shape displayed on the app.*
 ![Shape Detection](./public/images/detected.png)
-*Detected shape displayed on the app.*
+
 
 ### Mirror Symmetry Detection
 
+-*User uploads an image on the app.*
 ![Image Upload](./public//images/symmetry_check.png)
-*User uploads an image on the app.*
 
+
+-*Mirror symmetry line detected and displayed on the uploaded image.*
 ![Mirror Symmetry](./public//images/symmetry_solution.png)
-*Mirror symmetry line detected and displayed on the uploaded image.*
+
 
 ## Contributing
 
 Contributions are welcome! Please create a pull request or submit an issue for any suggestions or improvements.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
