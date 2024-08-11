@@ -1,6 +1,11 @@
 # Multi-Task Doodle and Symmetry Detection App
 
-## Overview
+## Team Name: HeavyComders
+### Team Members:
+- Eashan Bhatia
+- Aman Bhardwaj
+
+## Project Overview
 
 This project showcases a Streamlit application that performs two key tasks:
 
@@ -87,24 +92,19 @@ The shape detection model was trained on a custom dataset of doodles, utilizing 
 
 ### Doodle Shape Detection
 
-![Drawing Pad](images/drawing-pad.png)
+![Drawing Pad](./public/images/doodle.png)
 *User drawing a shape on the canvas.*
 
-![Shape Detection](images/shape-detection.png)
+![Shape Detection](./public/images/detected.png)
 *Detected shape displayed on the app.*
 
 ### Mirror Symmetry Detection
 
-![Image Upload](images/drawing-pad.png)
+![Image Upload](./public//images/symmetry_check.png)
 *User uploads an image on the app.*
 
-![Mirror Symmetry](images/mirror-symmetry.png)
+![Mirror Symmetry](./public//images/symmetry_solution.png)
 *Mirror symmetry line detected and displayed on the uploaded image.*
-
-## Future Work
-
-- **Shape Regularization**: Implementing algorithms to perfect freehand doodles.
-- **Shape Completion**: Adding functionality to complete occluded or incomplete shapes.
 
 ## Contributing
 
