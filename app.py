@@ -200,7 +200,7 @@ def detecting_mirrorLine(picture_name: str, title: str, show_detail=False):
     mirror.draw_mirrorLine(r, theta, title)
 
 
-st.title("Multi-Task Streamlit App")
+st.title("Curvetopia - HeavyComders")
 
 task = st.sidebar.selectbox(
     "Choose a task:",
