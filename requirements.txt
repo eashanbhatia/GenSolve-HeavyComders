@@ -9,3 +9,5 @@ numpy
 pillow
 requests
 python-dotenv
+tensorflow
+streamlit-drawable-canvas
