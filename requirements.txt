@@ -1,0 +1,11 @@
+streamlit
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+opencv-python-headless
+matplotlib
+numpy
+pillow
+requests
+python-dotenv
