@@ -13,17 +13,28 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-
-credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
-
-# Authenticate and build the Drive API service
 def authenticate_drive():
-    credentials = service_account.Credentials.from_service_account_file(
-        'C:/Users/Eashan/Downloads/gensolve-7c3b36ad8214.json',  # Replace with the path to your credentials.json
-        scopes=['https://www.googleapis.com/auth/drive']
-    )
+    # Fetch service account info from environment variables
+    service_account_info = {
+        "type": "service_account",
+        "project_id": os.getenv("PROJECT_ID"),
+        "private_key_id": os.getenv("PRIVATE_KEY_ID"),
+        "private_key": os.getenv("PRIVATE_KEY").replace("\\n", "\n"),  # Handle newline escape sequences
+        "client_email": os.getenv("CLIENT_EMAIL"),
+        "client_id": os.getenv("CLIENT_ID"),
+        "auth_uri": os.getenv("AUTH_URI"),
+        "token_uri": os.getenv("TOKEN_URI"),
+        "auth_provider_x509_cert_url": os.getenv("AUTH_PROVIDER_CERT_URL"),
+        "client_x509_cert_url": os.getenv("CLIENT_CERT_URL"),
+        "universe_domain": os.getenv("UNIVERSE_DOMAIN")
+    }
+
+    credentials = service_account.Credentials.from_service_account_info(service_account_info,
+    scopes=['https://www.googleapis.com/auth/drive'])
     service = build('drive', 'v3', credentials=credentials)
     return service
+
+
 
 def upload_to_drive(service, file, filename):
     # Upload the file to Google Drive
